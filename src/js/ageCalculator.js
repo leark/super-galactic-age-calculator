@@ -24,6 +24,7 @@ export default class AgeCalculator {
     return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Jupiter');
   }
 
+  // Utility method that calculates user's age in planet's solar year
   calcEarthAgeOnOtherPlanet(ageInEarthDays, planet) {
     let earthDaysInPlanetYear = 0;
     switch (planet) {
@@ -47,6 +48,7 @@ export default class AgeCalculator {
     return Math.floor(ageInEarthDays / earthDaysInPlanetYear);
   }
 
+  // calculates life expectancy in Earth years based on income tier (low, middle, high), gender (male, female), marital status (true, false)
   lifeExpctOnEarth(income, gender, marriage) {
     let expectedLife = this.baseLife;
 
