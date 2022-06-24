@@ -32,4 +32,8 @@ describe('AgeCalculator', () => {
   test('should return age in Jupiter years', () => {
     expect(ageCalculator.ageInJupiterYears()).toEqual(2);
   });
+
+  test('should calculate life expectancy based on income tier (low, middle, high), gender (male, female), marital status (true, false)', () => {
+    expect(ageCalculator.lifeExpectancy('low', 'male', 'false')).toEqual();
+  });
 });
