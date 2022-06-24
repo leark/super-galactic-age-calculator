@@ -1,5 +1,5 @@
 {
-  "name": "template-repo",
+  "name": "super-galactic-age-calculator",
   "version": "1.0.0",
   "description": "* _HTML_\r * _CSS_\r * _Bootstrap_\r * _jQuery_\r * _npm_\r * _webpack_\r * _eslint_\r * _babel_\r * _html-loader_\r * _style-loader_\r * _css-loader_\r * _file-loader_\r * _jest_",
   "main": "webpack.config.js",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/leark/template-repo.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Seung Lee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/leark/template-repo/issues"

@@ -1,6 +1,6 @@
-# (Application Name)
+# Super Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### Determines a user's age based on a planet's solar years
 
 #### By Seung Lee
 
