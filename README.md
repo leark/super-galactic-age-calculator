@@ -22,14 +22,19 @@
 
 ## Description
 
+A web application where if you enter your name, date of birth, economic status, gender, and marital status, it will print out your age in solar years of other planets, namely Mercury, Venus, Mars, and Jupiter. It also calculates your life expectancy and how much you've lived past the life expectancy if you did.
+
 ## Setup/Installation Requirements
 
 1. Open Git Bash if on Windows and terminal if on Mac
 2. Run the command
 
-    ``Git clone https://github.com/leark/super-galactic-age-calculator.git``
+    ``git clone https://github.com/leark/super-galactic-age-calculator.git``
 
-3. Go inside pizza-parlor directory
+3. Run the command
+
+    ``cd super-galactic-age-calculator``
+
 4. Run the command
 
     ``npm init -y``
@@ -41,7 +46,7 @@
 6. Run the command
 
     ``npm run start``
-    
+
 ## Known Bugs
 
 * _No known bugs_
