@@ -9,7 +9,11 @@ describe('AgeCalculator', () => {
     ageCalculator = new AgeCalculator(ageInEarthYears);
   });
 
-  test('should correctly create an AgeCalculator object using age', () => {
+  test('should correctly create an AgeCalculator object using age in Earth years', () => {
     expect(ageCalculator.ageInEarthYears).toEqual(30);
+  });
+
+  test('should return age in Earth days', () => {
+    expect(ageCalculator.ageInEarthDays()).toEqual(10950);
   });
 });
