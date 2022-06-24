@@ -24,4 +24,12 @@ describe('AgeCalculator', () => {
   test('should return age in Venus years', () => {
     expect(ageCalculator.ageInVenusYears()).toEqual(48);
   });
+
+  test('should return age in Mars years', () => {
+    expect(ageCalculator.ageInMarsYears()).toEqual(15);
+  });
+
+  test('should return age in Jupiter years', () => {
+    expect(ageCalculator.ageInJupiterYears()).toEqual(2);
+  });
 });

@@ -2,6 +2,9 @@ export default class AgeCalculator {
   constructor(ageInEarthYears) {
     this.ageInEarthYears = ageInEarthYears;
     this.earthDaysInMercuryYear = 88;
+    this.earthDaysInVenusYear = 225;
+    this.earthDaysInMarsYear = 687;
+    this.earthDaysInJupiterYear = 4333;
   }
 
   ageInEarthDays() {
@@ -11,4 +14,11 @@ export default class AgeCalculator {
   ageInMercuryYears() {
     return Math.floor(this.ageInEarthDays() / this.earthDaysInMercuryYear);
   }
+
+  ageInVenusYears() {
+    return Math.floor(this.ageInEarthDays() / this.earthDaysInVenusYear);
+  }
+
+  ageInMarsYears() {}
+  ageInJupiterYears() {}
 }
