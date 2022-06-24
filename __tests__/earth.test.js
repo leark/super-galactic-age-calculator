@@ -6,7 +6,7 @@ describe('Earth', () => {
 
   beforeEach(() => {
     age = 30;
-    earth = new earth(age);
+    earth = new Earth(age);
   });
 
   test('should correctly create an Earth object using age', () => {
