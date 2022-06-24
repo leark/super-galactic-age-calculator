@@ -19,6 +19,10 @@ export default class AgeCalculator {
     return Math.floor(this.ageInEarthDays() / this.earthDaysInVenusYear);
   }
 
-  ageInMarsYears() {}
-  ageInJupiterYears() {}
+  ageInMarsYears() {
+    return Math.floor(this.ageInEarthDays() / this.earthDaysInMarsYear);
+  }
+  ageInJupiterYears() {
+    return Math.floor(this.ageInEarthDays() / this.earthDaysInJupiterYear);
+  }
 }
