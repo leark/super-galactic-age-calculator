@@ -34,9 +34,7 @@ describe('AgeCalculator', () => {
   });
 
   test('should calculate life expectancy based on income tier (low, middle, high), gender (male, female), marital status (true, false) for Earth years', () => {
-    expect(ageCalculator.lifeExpectancyOnEarth('low', 'male', false)).toEqual(
-      55
-    );
+    expect(ageCalculator.lifeExpctOnEarth('low', 'male', false)).toEqual(55);
   });
 
   test('should calculate how long till user is dead in respective planet', () => {
@@ -52,5 +50,15 @@ describe('AgeCalculator', () => {
     expect(
       ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Jupiter')
     ).toEqual(2);
+  });
+
+  test('should return number of years user have lived past the life expectancy', () => {
+    expect(
+      ageCalculator.lifePastExpctInPlanet('low', 'male', false, 'Mercury')
+    ).toEqual(0);
+    ageCalculator.ageInEarthYears = 80;
+    expect(
+      ageCalculator.lifePastExpctInPlanet('low', 'male', false, 'Mercury')
+    ).toEqual(104);
   });
 });

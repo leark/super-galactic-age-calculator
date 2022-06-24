@@ -47,7 +47,7 @@ export default class AgeCalculator {
     return Math.floor(ageInEarthDays / earthDaysInPlanetYear);
   }
 
-  lifeExpectancyOnEarth(income, gender, marriage) {
+  lifeExpctOnEarth(income, gender, marriage) {
     let expectedLife = this.baseLife;
 
     switch (income) {
@@ -71,15 +71,29 @@ export default class AgeCalculator {
     return expectedLife;
   }
 
+  // returns negative number if user is older than life expectancy
   lifeLeftInPlanet(income, gender, marriage, planet) {
-    const expectedLifeInEarthYears = this.lifeExpectancyOnEarth(
+    const expectedLifeInEarthYears = this.lifeExpctOnEarth(
       income,
       gender,
       marriage
     );
-    const lifeLeftInEarthYears = Math.abs(
-      expectedLifeInEarthYears - this.ageInEarthYears
+    const lifeLeftInEarthYears =
+      expectedLifeInEarthYears - this.ageInEarthYears;
+    const lifeLeftInPlanetYears = this.calcEarthAgeOnOtherPlanet(
+      lifeLeftInEarthYears * 365,
+      planet
     );
-    return this.calcEarthAgeOnOtherPlanet(lifeLeftInEarthYears * 365, planet);
+    return lifeLeftInPlanetYears;
+  }
+
+  lifePastExpctInPlanet(income, gender, marriage, planet) {
+    const yearsPastExpct = this.lifeLeftInPlanet(
+      income,
+      gender,
+      marriage,
+      planet
+    );
+    return yearsPastExpct <= 0 ? Math.abs(yearsPastExpct) : 0;
   }
 }
