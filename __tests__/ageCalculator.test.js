@@ -41,16 +41,16 @@ describe('AgeCalculator', () => {
 
   test('should calculate how long till user is dead in respective planet', () => {
     expect(
-      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Mercury')
+      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Mercury')
     ).toEqual(103);
     expect(
-      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Venus')
+      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Venus')
     ).toEqual(40);
     expect(
-      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Mars')
+      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Mars')
     ).toEqual(13);
     expect(
-      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Jupiter')
+      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Jupiter')
     ).toEqual(2);
   });
 });

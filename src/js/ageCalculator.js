@@ -71,5 +71,15 @@ export default class AgeCalculator {
     return expectedLife;
   }
 
-  lifeLeftInPlanet(age, income, gender, marriage, planet) {}
+  lifeLeftInPlanet(income, gender, marriage, planet) {
+    const expectedLifeInEarthYears = this.lifeExpectancyOnEarth(
+      income,
+      gender,
+      marriage
+    );
+    const lifeLeftInEarthYears = Math.abs(
+      expectedLifeInEarthYears - this.ageInEarthYears
+    );
+    return this.calcEarthAgeOnOtherPlanet(lifeLeftInEarthYears * 365, planet);
+  }
 }
