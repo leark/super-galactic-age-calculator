@@ -13,19 +13,36 @@ export default class AgeCalculator {
   }
 
   ageInMercuryYears() {
-    return Math.floor(this.ageInEarthDays() / this.earthDaysInMercuryYear);
+    return calcEarthAgeInOtherPlanet(
+      this.ageInEarthDays(),
+      this.earthDaysInMercuryYear
+    );
   }
 
   ageInVenusYears() {
-    return Math.floor(this.ageInEarthDays() / this.earthDaysInVenusYear);
+    return calcEarthAgeInOtherPlanet(
+      this.ageInEarthDays(),
+      this.earthDaysInVenusYear
+    );
   }
 
   ageInMarsYears() {
-    return Math.floor(this.ageInEarthDays() / this.earthDaysInMarsYear);
+    return calcEarthAgeInOtherPlanet(
+      this.ageInEarthDays(),
+      this.earthDaysInMarsYear
+    );
   }
 
   ageInJupiterYears() {
-    return Math.floor(this.ageInEarthDays() / this.earthDaysInJupiterYear);
+    return calcEarthAgeInOtherPlanet(
+      this.ageInEarthDays(),
+      this.earthDaysInJupiterYear
+    );
+  }
+
+  calcEarthAgeInOtherPlanet(ageInEarthDays, earthDaysInPlanetYear) {
+    // not sure if this refactor is necessary
+    return Math.floor(ageInEarthDays / earthDaysInPlanetYear);
   }
 
   lifeExpectancy(income, gender, marriage) {
