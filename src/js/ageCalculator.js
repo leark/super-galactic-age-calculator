@@ -1,3 +1,5 @@
 export default class AgeCalculator {
-  constructor(age) {}
+  constructor(ageInEarthYears) {
+    this.ageInEarthYears = ageInEarthYears;
+  }
 }
