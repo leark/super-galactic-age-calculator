@@ -9,6 +9,6 @@ export default class AgeCalculator {
   }
 
   ageInMercuryYears() {
-    return Math.round(this.ageInEarthDays() / this.earthDaysInMercuryYear);
+    return Math.floor(this.ageInEarthDays() / this.earthDaysInMercuryYear);
   }
 }
