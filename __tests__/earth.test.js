@@ -13,7 +13,7 @@ describe('Earth', () => {
     expect(earth.age).toEqual(30);
   });
 
-  test('should return 365 for solar year', () => {
+  test('should return 365 days for solar year', () => {
     expect(earth.solarYear).toEqual(365);
   });
 

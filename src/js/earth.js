@@ -4,5 +4,7 @@ export default class Earth {
     this.solarYear = 365;
   }
 
-  ageInSeconds() {}
+  ageInSeconds() {
+    return this.age * 365 * 24 * 60 * 60;
+  }
 }
