@@ -3,5 +3,7 @@ export default class AgeCalculator {
     this.ageInEarthYears = ageInEarthYears;
   }
 
-  ageInEarthDays() {}
+  ageInEarthDays() {
+    return this.ageInEarthYears * 365;
+  }
 }
