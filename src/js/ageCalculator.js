@@ -1,10 +1,6 @@
 export default class AgeCalculator {
   constructor(ageInEarthYears) {
     this.ageInEarthYears = ageInEarthYears;
-    this.earthDaysInMercuryYear = 88;
-    this.earthDaysInVenusYear = 225;
-    this.earthDaysInMarsYear = 687;
-    this.earthDaysInJupiterYear = 4333;
     this.baseLife = 50;
   }
 
@@ -13,39 +9,45 @@ export default class AgeCalculator {
   }
 
   ageInMercuryYears() {
-    return calcEarthAgeInOtherPlanet(
-      this.ageInEarthDays(),
-      this.earthDaysInMercuryYear
-    );
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Mercury');
   }
 
   ageInVenusYears() {
-    return calcEarthAgeInOtherPlanet(
-      this.ageInEarthDays(),
-      this.earthDaysInVenusYear
-    );
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Venus');
   }
 
   ageInMarsYears() {
-    return calcEarthAgeInOtherPlanet(
-      this.ageInEarthDays(),
-      this.earthDaysInMarsYear
-    );
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Mars');
   }
 
   ageInJupiterYears() {
-    return calcEarthAgeInOtherPlanet(
-      this.ageInEarthDays(),
-      this.earthDaysInJupiterYear
-    );
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Jupiter');
   }
 
-  calcEarthAgeInOtherPlanet(ageInEarthDays, earthDaysInPlanetYear) {
-    // not sure if this refactor is necessary
+  calcEarthAgeOnOtherPlanet(ageInEarthDays, planet) {
+    let earthDaysInPlanetYear = 0;
+    switch (planet) {
+      case 'Mercury':
+        earthDaysInPlanetYear = 88;
+        break;
+      case 'Venus':
+        earthDaysInPlanetYear = 225;
+        break;
+      case 'Mars':
+        earthDaysInPlanetYear = 687;
+        break;
+      case 'Jupiter':
+        earthDaysInPlanetYear = 4333;
+        break;
+      default:
+        // default is Earth
+        earthDaysInPlanetYear = 365;
+    }
+
     return Math.floor(ageInEarthDays / earthDaysInPlanetYear);
   }
 
-  lifeExpectancy(income, gender, marriage) {
+  lifeExpectancyOnEarth(income, gender, marriage) {
     let expectedLife = this.baseLife;
 
     switch (income) {
@@ -68,4 +70,6 @@ export default class AgeCalculator {
 
     return expectedLife;
   }
+
+  lifeLeftInPlanet(age, income, gender, marriage, planet) {}
 }

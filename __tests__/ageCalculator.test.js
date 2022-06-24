@@ -34,8 +34,23 @@ describe('AgeCalculator', () => {
   });
 
   test('should calculate life expectancy based on income tier (low, middle, high), gender (male, female), marital status (true, false) for Earth years', () => {
-    expect(ageCalculator.lifeExpectancy('low', 'male', false)).toEqual(55);
+    expect(ageCalculator.lifeExpectancyOnEarth('low', 'male', false)).toEqual(
+      55
+    );
   });
 
-  // test('should calculate life expectancy')
+  test('should calculate how long till user is dead in respective planet', () => {
+    expect(
+      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Mercury')
+    ).toEqual(103);
+    expect(
+      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Venus')
+    ).toEqual(40);
+    expect(
+      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Mars')
+    ).toEqual(13);
+    expect(
+      ageCalculator.lifeLeftInPlanet(30, 'low', 'male', false, 'Jupiter')
+    ).toEqual(2);
+  });
 });
