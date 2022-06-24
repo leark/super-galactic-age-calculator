@@ -34,6 +34,6 @@ describe('AgeCalculator', () => {
   });
 
   test('should calculate life expectancy based on income tier (low, middle, high), gender (male, female), marital status (true, false)', () => {
-    expect(ageCalculator.lifeExpectancy('low', 'male', 'false')).toEqual();
+    expect(ageCalculator.lifeExpectancy('low', 'male', false)).toEqual(55);
   });
 });
