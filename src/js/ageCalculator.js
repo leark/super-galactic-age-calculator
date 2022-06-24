@@ -40,9 +40,6 @@ export default class AgeCalculator {
       case 'Jupiter':
         earthDaysInPlanetYear = 4333;
         break;
-      default:
-        // default is Earth
-        earthDaysInPlanetYear = 365;
     }
 
     return Math.floor(ageInEarthDays / earthDaysInPlanetYear);

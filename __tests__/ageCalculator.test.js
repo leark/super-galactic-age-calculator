@@ -35,6 +35,7 @@ describe('AgeCalculator', () => {
 
   test('should calculate life expectancy based on income tier (low, middle, high), gender (male, female), marital status (true, false) for Earth years', () => {
     expect(ageCalculator.lifeExpctOnEarth('low', 'male', false)).toEqual(55);
+    expect(ageCalculator.lifeExpctOnEarth('high', 'female', true)).toEqual(80);
   });
 
   test('should calculate how long till user is dead in respective planet', () => {

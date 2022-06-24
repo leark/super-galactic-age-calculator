@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title></title>
+  <title>Super Galactic Age Calculator</title>
 </head>
 <body>
   <div class="container">
-
+    <div id="header" class="p-5 container-fluid py-5 bg-light rounded-3">
+      <h1 class="display-5 fw-bold">Super Galactic Age Calculator</h1>
+      <p class="col-md-8 fs-6">A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. Would you like to know your age and other variouos informations if you were to live in other celestial bodies in our solar system?</p>
+    </div>
+    <div id="mainContent">
+      <div class="px-4 py-5 text-center">
+        <form>
+          <h3 class="display-7 fw-bold">Your Information</h3>
+          <div class="col-lg-6 mx-auto">
+            <div class="form-check py-3">
+              <label>Name</label>
+              <input />
+            </div>
+            <div class="form-check py-3">
+              <label>Date of Birth</label>
+              <input />
+            </div>
+            <div class="form-check py-3">
+              <label>Income Tier</label>
+              <input />
+            </div> 
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="female">
+                <label class="form-check-label" for="female">Female</label>
+              </div> 
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="male">
+                <label class="form-check-label" for="male">male</label>
+              </div>
+            </div>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="married">
+                <label class="form-check-label" for="married">Married</label>
+              </div> 
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="single">
+                <label class="form-check-label" for="single">Single</label>
+              </div>
+            </div>  
+          </div>
+          <button class="btn btn-secondary">Calculate</button>
+        </form>
+      </div>
+      <div id="resultsDiv" class="px-4 py-5">
+        <div class="row">
+          <div id="earth" class="col-sm-3 mx-auto">
+            <div>
+              <p>Your age in Earth years: <span id="age"></span></p>
+              <p>Earth years till life expectancy: <span id="tillExpectancy"></span></p>
+              <p>Earth years you've lived past life expectancy: <span id="pastExpectancy"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id="mercury" class="col-sm-3">
+            <div>
+              <p>Your age in Mercury years: <span id="age"></span></p>
+              <p>Mercury years till life expectancy: <span id="tillExpectancy"></span></p>
+              <p>Mercury years you've lived past life expectancy: <span id="pastExpectancy"></span></p>
+            </div>
+          </div>
+          <div id="venus" class="col-sm-3">
+            <p>Your age in Venus years: <span id="age"></span></p>
+            <p>Venus years till life expectancy: <span id="tillExpectancy"></span></p>
+            <p>Venus years you've lived past life expectancy: <span id="pastExpectancy"></span></p>
+          </div>
+          <div id="mars" class="col-sm-3">
+            <p>Your age in Mars years: <span id="age"></span></p>
+            <p>Mars years till life expectancy: <span id="tillExpectancy"></span></p>
+            <p>Mars years you've lived past life expectancy: <span id="pastExpectancy"></span></p>
+          </div>
+          <div id="jupiter" class="col-sm-3">
+            <p>Your age in Jupiter years: <span id="age"></span></p>
+            <p>Jupiter years till life expectancy: <span id="tillExpectancy"></span></p>
+            <p>Jupiter years you've lived past life expectancy: <span id="pastExpectancy"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

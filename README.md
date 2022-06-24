@@ -24,16 +24,27 @@
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+1. Open Git Bash if on Windows and terminal if on Mac
+2. Run the command
 
+    ``Git clone https://github.com/leark/super-galactic-age-calculator.git``
+
+3. Go inside pizza-parlor directory
+4. Run the command
+
+    ``npm init -y``
+
+5. Run the command
+
+    ``npm install``
+
+6. Run the command
+
+    ``npm run start``
+    
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _No known bugs_
 
 ## License
 

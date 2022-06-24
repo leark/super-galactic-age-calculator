@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leark/template-repo.git"
+    "url": "git+https://github.com/leark/super-galactic-age-calculator.git"
   },
   "keywords": [],
   "author": "Seung Lee",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leark/template-repo/issues"
+    "url": "https://github.com/leark/super-galactic-age-calculator/issues"
   },
-  "homepage": "https://github.com/leark/template-repo#readme",
+  "homepage": "https://github.com/leark/super-galactic-age-calculator#readme",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
