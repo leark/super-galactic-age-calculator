@@ -3,4 +3,6 @@ export default class Earth {
     this.age = age;
     this.solarYear = 365;
   }
+
+  ageInSeconds() {}
 }
