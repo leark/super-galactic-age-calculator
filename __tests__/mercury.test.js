@@ -4,6 +4,6 @@ describe('Mercury', () => {
   let mercury;
 
   beforeEach(() => {
-    mercury = new mercury();
+    mercury = new Mercury();
   });
 });
