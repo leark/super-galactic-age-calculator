@@ -11,7 +11,7 @@
     </div>
     <div id="mainContent">
       <div class="px-4 py-5">
-        <form>
+        <form id="submission">
           <h3 class="display-7 fw-bold">Your Information</h3>
           <div class="col-lg-5">
             <div class="form-check py-3">
@@ -25,37 +25,37 @@
             <div class="my-3">
               <h5>Economic Status</h3>
               <div class="form-check">
-                <input id="high" name="economicStatus" type="radio" class="form-check-input" checked="" required="">
+                <input id="high" name="economicStatus" type="radio" class="form-check-input" value="high" checked required>
                 <label class="form-check-label" for="high">High Income</label>
               </div>
               <div class="form-check">
-                <input id="middle" name="economicStatus" type="radio" class="form-check-input" required="">
+                <input id="middle" name="economicStatus" type="radio" class="form-check-input" vlaue="middle" required>
                 <label class="form-check-label" for="middle">Middle Income</label>
               </div>
               <div class="form-check">
-                <input id="low" name="economicStatus" type="radio" class="form-check-input" required="">
+                <input id="low" name="economicStatus" type="radio" value="low" class="form-check-input" required>
                 <label class="form-check-label" for="low">Low Income</label>
               </div>
             </div>
             <div class="my-3">
               <h5>Gender</h5>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="female" checked="">
+                <input class="form-check-input" type="radio" value="female" name="gender" id="female" checked>
                 <label class="form-check-label" for="female">Female</label>
               </div> 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="male">
-                <label class="form-check-label" for="male">male</label>
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">Male</label>
               </div>
             </div>
             <div class="my-3">
               <h5>Marital Status</h5>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="maritalStatus" id="married" checked="">
+                <input class="form-check-input" type="radio" name="maritalStatus" id="married" value="married" checked>
                 <label class="form-check-label" for="married">Married</label>
               </div> 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="maritalStatus" id="single">
+                <input class="form-check-input" type="radio" name="maritalStatus" id="single" value="single">
                 <label class="form-check-label" for="single">Single</label>
               </div>
             </div>  
@@ -66,11 +66,11 @@
       <div id="resultsDiv" class="px-4 py-5">
         <div class="row">
           <div id="earth" class="col-sm-3 mx-auto">
-            <div>
+            
               <p>Your age in Earth years: <span id="age"></span></p>
               <p>Earth years till life expectancy: <span id="tillExpectancy"></span></p>
               <p>Earth years you've lived past life expectancy: <span id="pastExpectancy"></span></p>
-            </div>
+            
           </div>
         </div>
         <div class="row">

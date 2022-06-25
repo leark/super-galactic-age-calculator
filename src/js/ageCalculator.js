@@ -40,6 +40,8 @@ export default class AgeCalculator {
       case 'Jupiter':
         earthDaysInPlanetYear = 4333;
         break;
+      default:
+        earthDaysInPlanetYear = 365;
     }
 
     return Math.floor(ageInEarthDays / earthDaysInPlanetYear);
@@ -51,9 +53,11 @@ export default class AgeCalculator {
 
     switch (income) {
       case 'high':
-        expectedLife += 10;
+        expectedLife += 20;
+        break;
       case 'middle':
-        expectedLife += 5;
+        expectedLife += 10;
+        break;
       case 'low':
         expectedLife += 5;
         break;
@@ -96,3 +100,5 @@ export default class AgeCalculator {
     return yearsPastExpct <= 0 ? Math.abs(yearsPastExpct) : 0;
   }
 }
+
+// refactor lifeleftinplanet to support earth
