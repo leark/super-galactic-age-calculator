@@ -7,7 +7,7 @@ import AgeCalculator from './js/ageCalculator.js';
 // User Interface Logic
 
 $(function () {
-  $('form#submission').submit(function (event) {
+  $('form#submission').on('submit', function (event) {
     event.preventDefault();
     // const name = $('#name').val();
     const dob = $('#born').val();
@@ -20,25 +20,11 @@ $(function () {
       marital = false;
     }
 
-    console.log(econo);
-    console.log(gender);
-    console.log(marital);
-
     const yearBorn = dob.substring(0, 4);
     const yearCurr = new Date().getFullYear();
     const ageEarth = yearCurr - yearBorn;
 
     const ageCalc = new AgeCalculator(ageEarth);
-    // const lifeExpctEarth = ageCalc.lifeExpctOnEarth(econo, gender, marital);
-    // const lifeLeftOnEarth = ageCalc.lifeLeftOnPlanet(econo, gender, marital);
-    // const pastExpctEarth = ageCalc.lifePastExpctInPlanet(
-    //   econo,
-    //   gender,
-    //   marital
-    // );
-    // console.log(yearBorn);
-    // console.log(lifeExpctEarth);
-    // console.log(pastExpctEarth);
 
     populatePlanetFields('earth', ageCalc, econo, gender, marital);
     populatePlanetFields('mercury', ageCalc, econo, gender, marital);
