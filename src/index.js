@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import './css/styles.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
@@ -30,25 +29,48 @@ $(function () {
     const ageEarth = yearCurr - yearBorn;
 
     const ageCalc = new AgeCalculator(ageEarth);
-    const lifeExpctEarth = ageCalc.lifeExpctOnEarth(econo, gender, marital);
-    const pastExpctEarth = ageCalc.lifePastExpctInPlanet(
-      econo,
-      gender,
-      marital
-    );
-    console.log(yearBorn);
-    console.log(lifeExpctEarth);
-    console.log(pastExpctEarth);
+    // const lifeExpctEarth = ageCalc.lifeExpctOnEarth(econo, gender, marital);
+    // const lifeLeftOnEarth = ageCalc.lifeLeftOnPlanet(econo, gender, marital);
+    // const pastExpctEarth = ageCalc.lifePastExpctInPlanet(
+    //   econo,
+    //   gender,
+    //   marital
+    // );
+    // console.log(yearBorn);
+    // console.log(lifeExpctEarth);
+    // console.log(pastExpctEarth);
 
-    populatePlanetFields('earth', ageEarth, lifeExpctEarth, pastExpctEarth);
+    populatePlanetFields('earth', ageCalc, econo, gender, marital);
+    populatePlanetFields('mercury', ageCalc, econo, gender, marital);
+    populatePlanetFields('venus', ageCalc, econo, gender, marital);
+    populatePlanetFields('mars', ageCalc, econo, gender, marital);
+    populatePlanetFields('jupiter', ageCalc, econo, gender, marital);
   });
 
-  function populatePlanetFields(planet, ageEarth, lifeExpct, pastExpct) {
+  function populatePlanetFields(planet, ageCalc, econo, gender, marital) {
+    const ageOnPlanet = ageCalc.calcEarthAgeOnOtherPlanet(
+      ageCalc.ageInEarthDays(),
+      planet
+    );
+
+    const lifeLeftOnPlanet = ageCalc.lifeLeftOnPlanet(
+      econo,
+      gender,
+      marital,
+      planet
+    );
+    const pastExpctPlanet = ageCalc.lifePastExpctInPlanet(
+      econo,
+      gender,
+      marital,
+      planet
+    );
+
     const planetDiv = $(`#${planet}`);
     const spans = $(planetDiv).find('span');
-    spans[0].innerText = ageEarth;
-    spans[1].innerText = lifeExpct;
-    spans[2].innerText = pastExpct;
+    spans[0].innerText = ageOnPlanet;
+    spans[1].innerText = lifeLeftOnPlanet;
+    spans[2].innerText = pastExpctPlanet;
   }
 });
 

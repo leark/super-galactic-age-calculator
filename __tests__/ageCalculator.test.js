@@ -40,26 +40,26 @@ describe('AgeCalculator', () => {
 
   test('should calculate how long till user is dead in respective planet', () => {
     expect(
-      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Mercury')
+      ageCalculator.lifeLeftOnPlanet('low', 'male', false, 'mercury')
     ).toEqual(103);
     expect(
-      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Venus')
+      ageCalculator.lifeLeftOnPlanet('low', 'male', false, 'venus')
     ).toEqual(40);
     expect(
-      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Mars')
+      ageCalculator.lifeLeftOnPlanet('low', 'male', false, 'mars')
     ).toEqual(13);
     expect(
-      ageCalculator.lifeLeftInPlanet('low', 'male', false, 'Jupiter')
+      ageCalculator.lifeLeftOnPlanet('low', 'male', false, 'jupiter')
     ).toEqual(2);
   });
 
   test('should return number of years user have lived past the life expectancy', () => {
     expect(
-      ageCalculator.lifePastExpctInPlanet('low', 'male', false, 'Mercury')
+      ageCalculator.lifePastExpctInPlanet('low', 'male', false, 'mercury')
     ).toEqual(0);
     ageCalculator.ageInEarthYears = 80;
     expect(
-      ageCalculator.lifePastExpctInPlanet('low', 'male', false, 'Mercury')
+      ageCalculator.lifePastExpctInPlanet('low', 'male', false, 'mercury')
     ).toEqual(104);
   });
 });

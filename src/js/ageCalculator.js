@@ -9,35 +9,35 @@ export default class AgeCalculator {
   }
 
   ageInMercuryYears() {
-    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Mercury');
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'mercury');
   }
 
   ageInVenusYears() {
-    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Venus');
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'venus');
   }
 
   ageInMarsYears() {
-    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Mars');
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'mars');
   }
 
   ageInJupiterYears() {
-    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'Jupiter');
+    return this.calcEarthAgeOnOtherPlanet(this.ageInEarthDays(), 'jupiter');
   }
 
   // Utility method that calculates user's age in planet's solar year
   calcEarthAgeOnOtherPlanet(ageInEarthDays, planet) {
     let earthDaysInPlanetYear = 0;
     switch (planet) {
-      case 'Mercury':
+      case 'mercury':
         earthDaysInPlanetYear = 88;
         break;
-      case 'Venus':
+      case 'venus':
         earthDaysInPlanetYear = 225;
         break;
-      case 'Mars':
+      case 'mars':
         earthDaysInPlanetYear = 687;
         break;
-      case 'Jupiter':
+      case 'jupiter':
         earthDaysInPlanetYear = 4333;
         break;
       default:
@@ -75,7 +75,7 @@ export default class AgeCalculator {
   }
 
   // returns negative number if user is older than life expectancy
-  lifeLeftInPlanet(income, gender, marriage, planet) {
+  lifeLeftOnPlanet(income, gender, marriage, planet) {
     const expectedLifeInEarthYears = this.lifeExpctOnEarth(
       income,
       gender,
@@ -91,7 +91,7 @@ export default class AgeCalculator {
   }
 
   lifePastExpctInPlanet(income, gender, marriage, planet) {
-    const yearsPastExpct = this.lifeLeftInPlanet(
+    const yearsPastExpct = this.lifeLeftOnPlanet(
       income,
       gender,
       marriage,
@@ -100,5 +100,3 @@ export default class AgeCalculator {
     return yearsPastExpct <= 0 ? Math.abs(yearsPastExpct) : 0;
   }
 }
-
-// refactor lifeleftinplanet to support earth
