@@ -20,6 +20,8 @@
 * _file-loader_
 * _jest_
 
+## [GitHub Pages Link](https://leark.github.io/super-galactic-age-calculator)
+
 ## Description
 
 A web application where if you enter your name, date of birth, economic status, gender, and marital status, it will print out your age in solar years of other planets, namely Mercury, Venus, Mars, and Jupiter. It also calculates your life expectancy and how much you've lived past the life expectancy if you did.
